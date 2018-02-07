@@ -1,0 +1,17 @@
+.order {
+	background: url(../img/bg/bg-texture.jpg) center center no-repeat / cover;
+	
+}
+
+.order__buttons {
+	display: flex;
+	margin-top: rem(20px);
+	align-items: center;
+}
+
+.order__btn-clear {
+	margin-left: rem(20px);
+	color: white;
+	font-size: rem(14px);
+	text-decoration: none;
+}

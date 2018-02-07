@@ -1,0 +1,56 @@
+.best {
+	background: url('../img/bg/bg2.jpg') no-repeat center center / cover;
+	
+	.section-title {
+		margin: 0 0 rem(55px) 0;
+	}
+
+	@include tablets {
+		background: url('../img/bg/bg2t.jpg') no-repeat center center / cover;
+	}
+
+	@include phones {
+		background: url('../img/bg/bg2ph.jpg') no-repeat center center / cover;
+	}
+}
+
+.best__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.best__item {
+	width: 31%;
+}
+
+.best__pic {
+	display: flex;
+	justify-content: center;
+}
+
+.best__pic-hand {
+	margin-left: rem(35px);
+}
+
+.best__icon {
+	width: rem(100px);
+	height: rem(90px);
+	margin-bottom: rem(18px);
+}
+
+.best__info {
+	text-align: center;
+	
+}
+
+.best__title {
+	font-size: rem(24px);
+	@include lifehack();
+
+}
+
+.best__desc {
+	margin-top: rem(15px);
+	font-size: rem(14px);
+	color: #82807f;
+}

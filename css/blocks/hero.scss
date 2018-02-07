@@ -1,0 +1,64 @@
+.hero {
+	background: url('../img/bg/video-bg.png') no-repeat center center / cover;
+	padding-top: rem(12px);
+}
+
+.hero__container {
+	justify-content: flex-start;
+	position: relative;
+}
+
+.hero__content {
+	display: flex;
+	flex: 0.8;
+	align-items: center;
+	justify-content: center;
+
+	@include tablets {
+		flex-flow: column;
+		align-items: center;
+		flex: 0.8;
+		text-align: center;
+	}
+}
+
+.hero__pic, .hero__desc {
+	width: 50%;
+
+	@include tablets {
+		width: 100%;
+	}
+}
+
+.hero__pic-img {
+	width: rem(451px);
+}
+
+.hero__desc {
+	padding-top: rem(45px);
+
+	@include tablets {
+		text-align: center;
+		padding-top: rem(10px);
+	}
+}
+
+.hero__title {
+	color: $yellow;
+	margin: 0;
+}
+
+.hero__desc-text {
+	font-size: rem(65px);
+	@include lifehack();
+	color: white;
+	text-transform: lowercase;
+	line-height: 0.95em;
+	margin-top: rem(15px);
+
+	@include tablets {
+		width: 450px;
+		margin: 0 auto;
+		margin-top: rem(20px);
+	}
+}

@@ -1,0 +1,43 @@
+.nav {
+	@include tablets() {
+		display: none;
+	}
+}
+
+.nav__list {
+	display: flex;
+	align-items: center;
+}
+
+.nav__item {
+	display: flex;
+	align-items: center;
+
+	&:before {
+		content: '';
+		width: rem(4px);
+		height: rem(4px);
+		border-radius: 50%;
+		background: white;
+		display: block;
+		margin: 0 rem(17px);
+	}
+
+	&:first-child {
+		&:before {
+			display: none;
+		}
+	}
+}
+
+.nav__link {
+	color: white;
+	font-size: rem(13px);
+	text-transform: uppercase;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+

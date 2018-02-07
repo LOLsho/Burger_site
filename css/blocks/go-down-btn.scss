@@ -1,0 +1,12 @@
+.go-down-btn {
+	position: absolute;
+	bottom: 7%;
+	left: 50%;
+	margin-left: rem(-14.5px);
+	transition: 0.2s ease;
+
+	&:hover {
+		transform: scale(1.5);
+		bottom: 8.5%;
+	}
+}

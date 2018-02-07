@@ -1,0 +1,15 @@
+.btn {
+	padding: rem(10px) rem(16px);
+	background: $red;
+	text-transform: uppercase;
+	font-size: rem(13px);
+	color: white;
+	border-radius: rem(4px);
+	text-decoration: none;
+	display: block;
+	font-weight: bold;
+
+	&:hover {
+		background: darken($red, 7%);
+	}
+}

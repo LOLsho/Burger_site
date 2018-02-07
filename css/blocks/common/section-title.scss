@@ -1,0 +1,20 @@
+.section-title {
+	font-size: rem(72px);
+	@include gagalin();
+
+	&_color {
+		&_black {
+			color: $black;
+		}
+
+		&_yellow {
+			color: $yellow;
+		}
+	}
+
+	&_align {
+		&_center {
+			text-align: center;
+		}
+	}
+}

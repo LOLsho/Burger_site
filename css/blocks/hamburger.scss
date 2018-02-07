@@ -1,0 +1,76 @@
+.hamburger {
+  cursor: pointer;
+  width: 23px;
+  height: 22px;
+  position: relative;
+  transition: 0.8s;
+  display: none;
+
+  @include tablets {
+    display: block;
+    margin-left: 30px;
+  }
+
+  &:hover {
+    .hamburger__top {
+      backface-visibility: hidden;
+      top: 6px;
+      transform: rotate(50deg);
+    }
+
+    .hamburger__middle {
+      opacity: 0;
+    }
+
+    .hamburger__bottom {
+      backface-visibility: hidden;
+      top: 6px;
+      transform: rotate(-410deg);
+    }
+  }
+}
+
+.hamburger__common {
+  display: block;
+  position: absolute;
+  border-top: 4px solid white;
+  border-radius: 3px;
+  left: 0;
+  right: 0;
+  transition: 0.8s;
+}
+
+.hamburger__top {
+  @extend .hamburger__common;
+  top: 0;
+}
+
+.hamburger__middle {
+  @extend .hamburger__common;
+  top: 9px;
+}
+
+.hamburger__bottom {
+  @extend .hamburger__common;
+  top: 18px;
+}
+
+
+//Подсматривал решение шамбургера
+// .menu-top-click {
+//   backface-visibility: hidden;
+//   top: 15px;
+//   transform: rotate(50deg);
+//   transition: 0.55s 0.5s;
+// }
+
+// .menu-middle-click {
+//   opacity: 0;
+// }
+
+// .menu-bottom-click {
+//   backface-visibility: hidden;
+//   top: 15px;
+//   transform: rotate(-410deg);
+//   transition: 0.55s 0.5s;
+// }
