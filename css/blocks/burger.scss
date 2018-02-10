@@ -1,0 +1,75 @@
+.burger {
+	background: url(../img/bg/gradient.jpg) no-repeat center center / cover;
+}
+
+.burger__content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.burger__pic {
+	width: 49%;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.burger__img {
+	width: 100%;	
+}
+
+.burger__kkal {
+	position: absolute;
+	font-size: rem(14px);
+	color: rgba(white, .5);
+	@include gagalin();
+	text-align: center;
+	left: rem(21px);
+	bottom: rem(-44px);
+
+}
+
+.burger__kkal-num {
+	background: url(../img/icon/kkal.png) no-repeat center center;
+	height: rem(60px);
+	width: rem(60px);
+	font-size: rem(20px);
+	padding-top: rem(23px);
+}
+
+.burger__desc {
+	width: 49%;
+}
+
+.burger__title {
+	line-height: rem(65px);
+	margin-top: rem(-15px);
+}
+
+.burger__text {
+	color: white;
+	font-size: rem(14px);
+	line-height: rem(25px);
+	margin-top: rem(38px);
+}
+
+.burger__offer {
+	display: flex;
+}
+
+.burger__price {
+	color: #e35028;
+	font-size: rem(30px);
+	@include gagalin();
+}
+
+.burger__number {
+	font-size: rem(72px);
+}
+
+.burger__btn {
+	margin-left: rem(26px);
+	display: inline-block;
+	height: rem(38px);
+	margin-top: rem(50px);
+}

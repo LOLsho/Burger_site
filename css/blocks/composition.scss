@@ -1,0 +1,99 @@
+.composition__button {
+	width: rem(90px);
+	height: rem(90px);
+	background: #f08c33;
+	color: white;
+	border-radius: 5px;
+	position: absolute;
+	top: rem(-63px);
+	left: rem(21px);
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	font-size: rem(14px);
+	@include gagalin();
+	padding-top: rem(6px);
+
+	&:hover {
+		background: #e35028;
+		cursor: pointer;
+
+		.composition__info {
+			height: rem(30px);
+			padding: rem(13px) rem(20px);
+		}
+	}
+}
+
+.composition__button:hover > .composition__info {
+	height: auto;
+	padding: rem(13px) rem(20px);
+}
+
+.composition__img {
+	margin-bottom: rem(5px);
+}
+
+.composition__info {
+	background: rgba(#fff, .9);
+	border-radius: 5px;
+	position: absolute;
+	top: rem(-63px);
+	left: rem(111px);
+	min-width: rem(270px);
+	height: 0;
+	overflow: hidden;
+}
+
+.composition__list {
+	font-size: rem(14px);
+}
+
+.composition__item {
+	display: flex;
+	align-items: center;
+	margin-bottom: rem(5px);
+
+	&:last-child {
+		margin-bottom: 0px;
+	}
+}
+
+.composition__icon {
+	width: rem(48px);
+	height: rem(43px);
+	margin-right: rem(22px);
+}
+
+.composition__icon1 {
+	background: url('../img/icon/1.png') no-repeat center center;
+}
+
+.composition__icon2 {
+	background: url('../img/icon/2.png') no-repeat center center;
+}
+
+.composition__icon3 {
+	background: url('../img/icon/3.png') no-repeat center center;
+}
+
+.composition__icon4 {
+	background: url('../img/icon/4.png') no-repeat center center;
+}
+
+.composition__icon5 {
+	background: url('../img/icon/5.png') no-repeat center center;
+}
+
+.composition__icon6 {
+	background: url('../img/icon/6.png') no-repeat center center;
+}
+
+.composition__name {
+	@include ubuntu(medium);
+}
+
+.composition__weight {
+	margin-left: auto;
+}
