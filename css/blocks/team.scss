@@ -29,7 +29,7 @@
 }
 
 .team__acco {
-
+	min-height: rem(320px);
 }
 
 .team__acco-item {
@@ -40,12 +40,14 @@
 
 
 	.team__acco-content {
-		height: auto;
+		height: rem(105px);
+		opacity: 1;
 	}
 
 	.team__acco-trigger {
 		color: $yellow;
 		margin-bottom: rem(18px);
+
 
 		&:before {
 			transform: rotate(180deg);
@@ -70,6 +72,7 @@
 		border-top-color: $yellow;
 		margin-top: rem(6px);
 		margin-right: rem(10px);
+		transition: 0.1s ease;
 	}
 }
 
@@ -77,6 +80,8 @@
 	display: flex;
 	height: 0;
 	overflow: hidden;
+	transition: 0.1s ease;
+	opacity: 0;
 }
 
 .team__acco-pic {
@@ -99,7 +104,7 @@
 	margin-bottom: rem(10px);
 }
 
-.team__acco-article-content {
+.team__acco-article-content p {
 	font-size: rem(14px);
 	@include ubuntu();
 }
