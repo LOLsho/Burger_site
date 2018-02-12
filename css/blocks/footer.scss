@@ -1,0 +1,41 @@
+.footer {
+	position: absolute;
+	bottom: 0;
+	background: #101010;
+	padding: rem(9px) 0;
+}
+
+.footer__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__info {
+	font-size: rem(14px);
+}
+
+.footer__adress {
+	color: white;
+
+}
+
+.footer__tel {
+	@include ubuntu(bold);
+	color: #e45028;
+}
+
+.footer__socials {
+	display: flex;
+	font-size: rem(20px);
+	width: rem(142px);
+	justify-content: space-between;
+}
+
+.footer__link {
+	color: rgba(white, .3);
+
+	&:hover {
+		color: white;
+	}
+}
