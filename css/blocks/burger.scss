@@ -2,9 +2,20 @@
 	background: url(../img/bg/gradient.jpg) no-repeat center center / cover;
 }
 
+.burger__container {
+	// position: relative;
+}
+
 .burger__content {
 	display: flex;
 	justify-content: space-between;
+	position: relative;
+}
+
+.burger__slider {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
 }
 
 .burger__pic {
@@ -72,4 +83,21 @@
 	display: inline-block;
 	height: rem(38px);
 	margin-top: rem(50px);
+}
+
+
+.burger__left {
+	position: absolute;
+	top: 50%;
+	margin-top: -13.5px;
+	left: -15px;
+	cursor: pointer;
+}
+
+.burger__right {
+	position: absolute;
+	top: 50%;
+	margin-top: -13.5px;
+	right: -15px;
+	cursor: pointer;
 }

@@ -1,0 +1,55 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(#2f3234, .92);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	display: none;
+	transition: 0.3s ease;
+	opacity: 0;
+}
+
+.overlay__container {
+	width: 460px;
+	background: #fff;
+	border-radius: 5px;
+	position: relative;
+	padding: rem(28px) rem(20px) rem(23px);
+}
+
+.overlay__close {
+	position: absolute;
+	top: rem(13px);
+	right: rem(18px);
+	color: #ec8468;
+	font-size: rem(22px);
+	cursor: pointer;
+	transition: 0.2s ease;
+
+	&:hover {
+		font-size: rem(26px);
+		top: rem(10px);
+		right: rem(16px);
+	}
+}
+
+.overlay__content {
+
+}
+
+.overlay__title {
+	font-size: rem(14px);
+	@include gagalin();
+
+}
+
+.overlay__text {
+	margin-top: rem(22px);
+	font-size: rem(14px);
+	line-height: rem(25px);
+}
