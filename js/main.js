@@ -1,4 +1,4 @@
-// --- Functions --- //
+// -------- Functions -------- //
 function delay(ms) {
 	return new Promise(function(resolve) {
 		setTimeout(function() {
@@ -7,7 +7,8 @@ function delay(ms) {
 	});
 }
 
-// --->> team <<--- //
+
+// -------->> team <<-------- //
 var allBtns = document.querySelectorAll('.team__acco-item');
 var links = document.querySelectorAll('.team__acco-trigger');
 
@@ -33,7 +34,8 @@ for (var i = 0; i < allBtns.length; ++i) {
 	});
 }
 
-// --->> burger <<--- //
+
+// -------->> burger <<-------- //
 var compositionBtn = document.querySelector('#composition__button');
 var compositionInf = document.querySelector('#composition__info');
 
@@ -50,7 +52,8 @@ compositionBtn.addEventListener('mouseout', function() {
 	compositionInf.style.opacity = '0';
 });
 
-// --->> reviews <<--- //
+
+// -------->> reviews <<-------- //
 var overlay = document.querySelector('#overlay');
 var overlay__close = overlay.querySelector('.overlay__close');
 

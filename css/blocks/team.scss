@@ -26,6 +26,10 @@
 .team__title {
 	margin: 0;
 	margin-bottom: rem(45px);
+
+	@include tablets {
+		margin: 0 auto;
+	}
 }
 
 .team__acco {

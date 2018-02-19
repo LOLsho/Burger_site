@@ -1,0 +1,64 @@
+.slider {
+
+}
+
+.slider__controls {
+
+}
+
+.slider__arrow {
+	position: absolute;
+	top: 50%;
+	margin-top: -13.5px;
+	cursor: pointer;
+	transition: 0.4s ease;
+
+	&:hover {
+		transform: scale(1.5);
+	}
+}
+
+.slider__arrow-left {
+	left: 20px;
+
+	@include tablets {
+		flex-flow: column;
+		align-items: center;
+	}
+
+	@include phones {
+
+	}
+}
+
+.slider__arrow-right {
+	right: 20px;
+
+	@include tablets {
+		flex-flow: column;
+		align-items: center;
+	}
+
+	@include phones {
+
+	}
+}
+
+.slider__content {
+}
+
+.slider__item {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+
+	@include tablets {
+		flex-flow: column;
+		align-items: center;
+	}
+
+	@include phones {
+
+	}
+	
+}

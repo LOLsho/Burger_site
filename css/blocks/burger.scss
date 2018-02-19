@@ -2,24 +2,10 @@
 	background: url(../img/bg/gradient.jpg) no-repeat center center / cover;
 }
 
-.burger__container {
-	// position: relative;
-}
 
-.burger__content {
-	display: flex;
-	justify-content: space-between;
-	position: relative;
-}
-
-.burger__slider {
-	display: flex;
-	justify-content: space-between;
-	position: relative;
-}
 
 .burger__pic {
-	width: 49%;
+	width: 505px;
 	display: flex;
 	align-items: center;
 	position: relative;
@@ -38,23 +24,54 @@
 	left: rem(21px);
 	bottom: rem(-44px);
 
+	@include tablets {
+		top: rem(-63px);
+		left: auto;
+		right: rem(12px);
+	}
+
+	@include phones {
+
+	}
+
 }
 
 .burger__kkal-num {
 	background: url(../img/icon/kkal.png) no-repeat center center;
-	height: rem(60px);
-	width: rem(60px);
+	height: 60px;
+	width: 60px;
 	font-size: rem(20px);
 	padding-top: rem(23px);
 }
 
 .burger__desc {
 	width: 49%;
+
+	@include tablets {
+		width: 570px;
+		text-align: center;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		margin-top: 36px;
+	}
+
+	@include phones {
+
+	}
 }
 
 .burger__title {
 	line-height: rem(65px);
 	margin-top: rem(-15px);
+
+	@include tablets {
+		width: 327px;
+	}
+
+	@include phones {
+
+	}
 }
 
 .burger__text {
@@ -62,10 +79,26 @@
 	font-size: rem(14px);
 	line-height: rem(25px);
 	margin-top: rem(38px);
+
+	@include tablets {
+		margin-top: rem(25px);
+	}
+
+	@include phones {
+
+	}
 }
 
 .burger__offer {
 	display: flex;
+
+	@include tablets {
+		margin-top: rem(20px);
+	}
+
+	@include phones {
+
+	}
 }
 
 .burger__price {
@@ -83,21 +116,4 @@
 	display: inline-block;
 	height: rem(38px);
 	margin-top: rem(50px);
-}
-
-
-.burger__left {
-	position: absolute;
-	top: 50%;
-	margin-top: -13.5px;
-	left: -15px;
-	cursor: pointer;
-}
-
-.burger__right {
-	position: absolute;
-	top: 50%;
-	margin-top: -13.5px;
-	right: -15px;
-	cursor: pointer;
 }

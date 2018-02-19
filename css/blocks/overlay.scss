@@ -29,12 +29,13 @@
 	color: #ec8468;
 	font-size: rem(22px);
 	cursor: pointer;
-	transition: 0.2s ease;
+	transition: 0.5s;
 
 	&:hover {
-		font-size: rem(26px);
-		top: rem(10px);
-		right: rem(16px);
+		// font-size: rem(26px);
+		// top: rem(10px);
+		// right: rem(16px);
+		transform: scale(1.5);
 	}
 }
 

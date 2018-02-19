@@ -32,6 +32,14 @@
 
 .hero__pic-img {
 	width: rem(451px);
+
+	@include tablets {
+		width: 62.9%;
+	}
+
+	@include phones {
+		width: 79.5%;
+	}
 }
 
 .hero__desc {
@@ -60,5 +68,12 @@
 		width: 450px;
 		margin: 0 auto;
 		margin-top: rem(20px);
+	}
+
+	@include phones {
+		width: 100%;
+		margin: 0 auto;
+		margin-top: rem(20px);
+		font-size: rem(55px);
 	}
 }

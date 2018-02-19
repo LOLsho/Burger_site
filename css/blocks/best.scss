@@ -3,6 +3,10 @@
 	
 	.section-title {
 		margin: 0 0 rem(55px) 0;
+
+		@include phones {
+			font-size: 50px;
+		}
 	}
 
 	@include tablets {
@@ -14,13 +18,40 @@
 	}
 }
 
+.container__best {
+	@include tablets {
+		justify-content: flex-start;
+		padding-top: 37px;
+	}
+
+	@include phones {
+		justify-content: flex-start;
+	}
+}
+
 .best__list {
 	display: flex;
 	justify-content: space-between;
+
+	@include tablets {
+		margin-top: 152px;
+	}
+
+	@include phones {
+		flex-flow: column;
+		margin-top: 15px;
+	}
 }
 
 .best__item {
 	width: 31%;
+
+	@include phones {
+		display: flex;
+		width: 100%;
+		padding-left: 10px;
+		margin-bottom: 35px;
+	}
 }
 
 .best__pic {
@@ -28,19 +59,42 @@
 	justify-content: center;
 }
 
+.best__pic-meet {
+
+}
+
 .best__pic-hand {
 	margin-left: rem(35px);
+
+	@include phones {
+		margin-left: rem(15px);
+	}
+}
+
+.best__pic-helfy {
+	@include phones {
+		margin-left: rem(5px);
+	}
 }
 
 .best__icon {
-	width: rem(100px);
-	height: rem(90px);
+	width: 100px;
+	height: 90px;
 	margin-bottom: rem(18px);
 }
 
 .best__info {
 	text-align: center;
+
+	@include phones {
+		text-align: left;
+		width: 68%;
+		margin-left: auto;
+	}
 	
+	@include phones-mini {
+		width: 60%;
+	}
 }
 
 .best__title {
@@ -53,4 +107,8 @@
 	margin-top: rem(15px);
 	font-size: rem(14px);
 	color: #82807f;
+
+	@include phones {
+		line-height: 1.7em;
+	}
 }

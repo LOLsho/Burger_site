@@ -93,13 +93,13 @@
 			</section>
 
 			<section class="section best">
-				<div class="container">
+				<div class="container container__best">
 					<h2 class="section-title section-title_color_black section-title_align_center">
 						Мы лучшие
 					</h2>
 					<ul class="best__list">
 						<li class="best__item">
-							<div class="best__pic">
+							<div class="best__pic best__pic-meet">
 								<svg class="best__icon" fill="#e25028">
 
 									<path d="M38.477 4.84l-.007.001h.007zM17.721 9.871c.049.113.23.272.301.25.135-.042.32-.188.334-.31.122-1.001-.254-1.857-.829-2.757-.152.591-.625.985-.292 1.584.213.382.309.828.486 1.233zm10.474 4.242l.482-1.268c-.321-.069-.321-.069-.354-1.209-.392-.129-.792-.186-.692.412.118.707-.146 1.038-.862 1.146l1.189.536c.08.127.158.255.237.383zm3.789-2.498a.32.32 0 0 0 .222-.098c.267-.301.086-1.386-.22-1.671-.154-.144-.235-.386-.3-.6-.046-.15-.009-.325-.009-.489l-.239.005v1.669c.103.287.234.669.379 1.046.023.062.107.135.167.138zm.233.897c-.639.204-.378-.521-.534-.591l-.919 1.196.056.134 1.397-.739zm-10.99 6.242c-.038-.397-.012-.817-.092-.838-.289-.077-.613-.021-.924-.014l.014.188c.263.176.528.351 1.002.664zm7.2-2.413a75.176 75.176 0 0 1-.084-.253l-1.711.495.105.314 1.69-.556zm2.919 4.417c.202-1.055 0-1.443-.587-1.341.107.23.216.456.317.686.094.216.18.437.27.655zm-7.981-2.597l.028-.26-1.399-.089-.026.245c.438.261.923.135 1.397.104zm-3.929-3.19c.023-.036-.202-.229-.294-.331-.201.479-.355.849-.521 1.242.713.092.598-.574.815-.911z"/>
@@ -143,7 +143,7 @@
 							</div>
 						</li>
 						<li class="best__item">
-							<div class="best__pic">
+							<div class="best__pic best__pic-helfy">
 								<svg class="best__icon" fill="#8ac03e">
 
 						            <path d="M60.186 71.927c.563-.721.885-1.131 1.098-1.406l-1.289-.968c-.396.05-.779.082-1.14.084.413.722.864 1.463 1.331 2.29zm1.876-9.226c.064-1.222.088-1.902-.103-2.563-.174.991-.38 1.984-.623 2.978l.726-.415zm-1.429 2.973c.236-.055.478-.119.723-.19.219-.484.399-.997.523-1.504l-.808.162a41.355 41.355 0 0 1-.438 1.532zM30.251 21.718c-1.13-.374-2.285-.536-1.997 1.188.113.671.093 1.214-.042 1.666.86.669 1.703 1.351 2.523 2.049l.539-1.414c-.926-.201-.926-.201-1.023-3.489zM46.722 57.51c.316.802.599 1.633.848 2.51l.729-.74a76.643 76.643 0 0 0-1.21-3.302c-.134.516-.273 1.024-.367 1.532zm-.704-3.951l.055-.032a72.704 72.704 0 0 0-.819-1.816c-.859-.115-1.47-.034-1.939.272a15.412 15.412 0 0 1 2.122 2.846l1.279.257-.698-1.527zm8.859 7.204c-.361.544-.419 1.466-.26 2.489.196-.561.383-1.122.549-1.687l-.289-.802zm2.478-25.845c.16-.176-.248-1.234-.366-1.229-.409.019-.821.074-1.264.147.297.574.58 1.157.849 1.751a4.8 4.8 0 0 0 .781-.669zm-.972-7.501c-2.072-.232-3.146.472-3.324 2.025.167.234.345.459.505.698 1.655-.003 1.608-1.982 2.819-2.723zm-16.437-4.876l-2.652 3.452.162.385 4.031-2.132c-1.844.587-1.092-1.506-1.541-1.705zM25.672 36.9l3.65-1.202c-.286-.201-.568-.403-.869-.598l-3.085.892.304.908zm23.094 29.648l.005.037c.024-.014.048-.022.072-.037h-.077zM37.04 56.83l.37-.41-2.923-2.69c-.298 2.721 1.117 2.92 2.553 3.1zM15.944 40.544l.081-.75c-1.227-.077-2.453-.156-3.68-.234.027.032.051.065.078.098.219.252.339.503.419.669l.069.141.093.173c.957.168 1.957-.031 2.94-.097zM2.257 33.967c1.041.135 1.469-.29 1.721-.868a39.572 39.572 0 0 1-.672-1.633l-1.049 2.501zm22.416 31.345l.499.736c.434.263.873.517 1.318.76l-1.287-1.921-.53.425zM80.3 60.058l.782 2.887.549-.14c.468-1.136.166-2.088-1.331-2.747zM37.087 7.978l-2.905-3.343-.435.414 3.018 3.25.322-.321zm13.61 9.012l-1.316 1.937 3.128-.284-1.812-1.653z"/>
@@ -167,91 +167,93 @@
 			</section>
 
 			<section class="section burger">
-				<div class="container burger__container">
+				<div class="container">
 					<div class="slider">
-						<div class="slider__dots">
-							<a class="burger__left">
+						<div class="slider__controls">
+							<a class="slider__arrow slider__arrow-left">
 								<img src="img/mini/scroll-left.png" alt="scroll-left" class="burger__left-scroll">
 							</a>
-							<a class="burger__right">
+							<a class="slider__arrow slider__arrow-right">
 								<img src="img/mini/scroll-right.png" alt="right-scroll" class="burger__right-scroll">
 							</a>
 						</div>
 						
-						<div class="burger__slider">
-							<div class="burger__pic">
-								<img src="img/slider/big-burger.png" alt="burger" class="burger__img">
-								<div class="composition">
-									<div class="composition__button" id="composition__button">
-										<img src="img/icon/burger-icon.png" alt="burger-icon" class="composition__img">
-										Состав
+						<div class="slider__content">
+							<div class="slider__item">
+								<div class="burger__pic">
+									<img src="img/slider/big-burger.png" alt="burger" class="burger__img">
+									<div class="composition">
+										<div class="composition__button" id="composition__button">
+											<img src="img/icon/burger-icon.png" alt="burger-icon" class="composition__img">
+											Состав
+										</div>
+										<div class="composition__info" id="composition__info">
+											<ul class="composition__list">
+												<li class="composition__item">
+													<div class="composition__icon composition__icon1"></div>
+													<p class="composition__name">Говядина</p>
+													<p class="composition__weight">
+														300 г
+													</p>
+												</li>
+												<li class="composition__item">
+													<div class="composition__icon composition__icon2"></div>
+													<p class="composition__name">Булочки</p>
+													<p class="composition__weight">
+														100 г
+													</p>
+												</li>
+												<li class="composition__item">
+													<div class="composition__icon composition__icon3"></div>
+													<p class="composition__name">Зелень</p>
+													<p class="composition__weight">
+														70 г
+													</p>
+												</li>
+												<li class="composition__item">
+													<div class="composition__icon composition__icon4"></div>
+													<p class="composition__name">Соус</p>
+													<p class="composition__weight">
+														150 г
+													</p>
+												</li>
+												<li class="composition__item">
+													<div class="composition__icon composition__icon5"></div>
+													<p class="composition__name">Овощи</p>
+													<p class="composition__weight">
+														200 г
+													</p>
+												</li>
+												<li class="composition__item">
+													<div class="composition__icon composition__icon6"></div>
+													<p class="composition__name">Сыр</p>
+													<p class="composition__weight">
+														80 г
+													</p>
+												</li>
+											</ul>
+										</div>
 									</div>
-									<div class="composition__info" id="composition__info">
-										<ul class="composition__list">
-											<li class="composition__item">
-												<div class="composition__icon composition__icon1"></div>
-												<p class="composition__name">Говядина</p>
-												<p class="composition__weight">
-													300 г
-												</p>
-											</li>
-											<li class="composition__item">
-												<div class="composition__icon composition__icon2"></div>
-												<p class="composition__name">Булочки</p>
-												<p class="composition__weight">
-													100 г
-												</p>
-											</li>
-											<li class="composition__item">
-												<div class="composition__icon composition__icon3"></div>
-												<p class="composition__name">Зелень</p>
-												<p class="composition__weight">
-													70 г
-												</p>
-											</li>
-											<li class="composition__item">
-												<div class="composition__icon composition__icon4"></div>
-												<p class="composition__name">Соус</p>
-												<p class="composition__weight">
-													150 г
-												</p>
-											</li>
-											<li class="composition__item">
-												<div class="composition__icon composition__icon5"></div>
-												<p class="composition__name">Овощи</p>
-												<p class="composition__weight">
-													200 г
-												</p>
-											</li>
-											<li class="composition__item">
-												<div class="composition__icon composition__icon6"></div>
-												<p class="composition__name">Сыр</p>
-												<p class="composition__weight">
-													80 г
-												</p>
-											</li>
-										</ul>
+									<div class="burger__kkal">
+										<div class="burger__kkal-num">
+											1200
+										</div>
+										Ккал
 									</div>
 								</div>
-								<div class="burger__kkal">
-									<div class="burger__kkal-num">
-										1200
-									</div>
-									Ккал
-								</div>
-							</div>
-							<div class="burger__desc">
-								<h2 class="burger__title section-title section-title_color_white">
-									Dark Beef Burger
-								</h2>
-								<p class="burger__text">
-									Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-								</p>
-								<div class="burger__offer">
-									<p class="burger__price">
-										<span class="burger__number">500</span> рублей
+								<div class="burger__desc">
+									<h2 class="burger__title section-title section-title_color_white">
+										Dark Beef Burger
+									</h2>
+									<p class="burger__text">
+										Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
 									</p>
-									<a href="" class="burger__btn btn">Заказать</a>
+									<div class="burger__offer">
+										<p class="burger__price">
+											<span class="burger__number">500</span> рублей
+										</p>
+										<a href="" class="burger__btn btn">Заказать</a>
+									</div>
 								</div>
 							</div>
 						</div>

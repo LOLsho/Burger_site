@@ -86,4 +86,8 @@ footer {
   @include tablets {
     min-height: 1124px;
   }
+
+  @include phones {
+    min-height: 800px;
+  }
 }
