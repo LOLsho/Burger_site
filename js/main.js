@@ -9,6 +9,15 @@ function delay(ms) {
 
 
 // -------->> team <<-------- //
+var scrollDown = $('.go-down-btn');
+scrollDown.on('click', function(event) {
+	event.preventDefault();
+
+	scrollToSection('down');
+});
+
+
+// -------->> team <<-------- //
 var allBtns = document.querySelectorAll('.team__acco-item');
 var links = document.querySelectorAll('.team__acco-trigger');
 
@@ -93,4 +102,86 @@ overlay__close.addEventListener('click', function() {
 	delay(900).then(function() {
 		overlay.style.display = 'none';
 	});
+});
+
+
+// -------->> menu <<-------- //
+// document.ready(function() {
+
+// });
+
+
+// -------->> One page scroll <<-------- //
+const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+
+
+const performTransition = sectionEq => {
+	const position = `${sectionEq * -100}%`;
+
+
+	if(inScroll) return; 
+
+	inScroll = true;
+
+	sections.eq(sectionEq).addClass('active')
+		.siblings().removeClass('active');
+
+	display.css({
+		'transform' : `translate(0, ${position})`,
+		'-webkit-transform' : `translate(0, ${position})`
+	});
+
+	setTimeout(() => {
+		inScroll = false;
+	}, 300);
+	
+};
+
+const scrollToSection = direction => {
+	const activeSection = sections.filter('.active');
+	const nextSection = activeSection.next();
+	const prevSection = activeSection.prev();
+
+
+	if(direction == 'up' && prevSection.length) {
+		performTransition(prevSection.index());
+	}
+
+	if(direction == 'down' && nextSection.length) {
+		performTransition(nextSection.index());
+	}
+};
+
+
+$(document).on({
+	wheel: event => {
+		var deltaY = event.originalEvent.deltaY;
+		const direction = deltaY > 0 ? 'down' : 'up'; 
+
+		scrollToSection(direction);
+	},
+	keydown: event => {
+		console.log(event.keyCode);
+		switch (event.keyCode) {	
+			case 40:
+				scrollToSection('down');
+				break;
+			case 38:
+				scrollToSection('up');
+				break;
+		}
+	},
+	touchmove: event => event.preventDefault()
+});
+
+$(document).swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      // Плагин возращает в каком направлении двигается экран, а функция ждет информации о том, куда скролить сайт
+      const scrollDirection = direction === 'down' ? 'up' : 'down';
+
+      scrollToSection(scrollDirection);
+    }
 });

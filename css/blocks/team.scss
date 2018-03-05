@@ -16,6 +16,12 @@
 
 	@include tablets {
 		width: 100%;
+		align-items: flex-start;
+		padding-top: 90px;
+	}
+
+	@include phones {
+		padding-top: 60px;
 	}
 }
 
@@ -28,33 +34,65 @@
 	margin-bottom: rem(45px);
 
 	@include tablets {
-		margin: 0 auto;
+		text-align: center;
+		margin-top: 45px;
+	}
+
+	@include phones {
+		font-size: 50px;
+		margin-top: 0px;
 	}
 }
 
 .team__acco {
 	min-height: rem(320px);
+
+	@include tablets {
+		margin-top: 148px;
+	}
+
+	@include phones {
+		margin-top: 98px;
+	}
 }
 
 .team__acco-item {
 	margin-bottom: rem(32px);
+
+	@include tablets {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	@include phones {
+		margin-bottom: 32px;
+	}
 }
 
 .team__acco-item--active {
 
 
 	.team__acco-content {
-		height: rem(105px);
+		height: 105px;
 		opacity: 1;
+
+		@include tablets {
+			height: 190px;
+		}
 	}
 
 	.team__acco-trigger {
 		color: $yellow;
-		margin-bottom: rem(18px);
-
+		margin-bottom: 18px;
 
 		&:before {
 			transform: rotate(180deg);
+		}
+
+		@include tablets {
+			margin-bottom: 12px;
 		}
 	}
 }
@@ -71,12 +109,25 @@
 		display: block;
 		width: 0;
 		height: 0;
-		border: rem(9px) solid transparent;
+		border: rem(7px) solid transparent;
 		border-bottom-width: 0;
 		border-top-color: $yellow;
 		margin-top: rem(6px);
 		margin-right: rem(10px);
 		transition: 0.1s ease;
+
+		@include tablets {
+			margin-top: rem(13px);
+		}
+	}
+
+	@include tablets {
+		font-size: rem(25px);
+		justify-content: center;
+	}
+
+	@include phones {
+		white-space: nowrap;
 	}
 }
 
@@ -86,6 +137,16 @@
 	overflow: hidden;
 	transition: 0.1s ease;
 	opacity: 0;
+
+	@include tablets {
+		flex-flow: column;
+		align-items: center;
+		width: 335px;
+	}
+
+	@include phones {
+		width: 100%;
+	}
 }
 
 .team__acco-pic {
@@ -95,6 +156,10 @@
 .team__acco-avatar {
 	border-radius: 50%;
 	margin-right: rem(22px);
+
+	@include tablets {
+		margin-right: rem(0px);
+	}
 }
 
 
@@ -106,9 +171,19 @@
 	font-size: rem(16px);
 	@include ubuntu(bold);
 	margin-bottom: rem(10px);
+
+	@include tablets {
+		font-size: 14.06px;
+		margin-top: 10px;
+	}
 }
 
 .team__acco-article-content p {
 	font-size: rem(14px);
 	@include ubuntu();
+
+	@include tablets {
+		font-size: 14.06px;
+		margin-top: 15px;
+	}
 }
