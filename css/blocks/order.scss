@@ -1,12 +1,16 @@
 .order {
 	background: url(../img/bg/bg-texture.jpg) center center no-repeat / cover;
-	
 }
 
 .order__buttons {
 	display: flex;
 	margin-top: rem(20px);
 	align-items: center;
+}
+
+.order__btn {
+	border: none;
+	cursor: pointer;
 }
 
 .order__btn-clear {

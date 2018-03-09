@@ -8,13 +8,126 @@ function delay(ms) {
 }
 
 
-// -------->> team <<-------- //
+// -------->> fixed-menu <<-------- //
+const FIXED_1 = $('#FIXED_1'),
+	  FIXED_2 = $('#FIXED_2'),
+	  FIXED_3 = $('#FIXED_3'),
+	  FIXED_4 = $('#FIXED_4'),
+	  FIXED_5 = $('#FIXED_5'),
+	  FIXED_6 = $('#FIXED_6'),
+	  FIXED_7 = $('#FIXED_7'),
+	  FIXED_8 = $('#FIXED_8');
+
+FIXED_1.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(0);
+});
+
+FIXED_2.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(1);
+});
+
+FIXED_3.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(2);
+});
+
+FIXED_4.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(3);
+});
+
+FIXED_5.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(4);
+});
+
+FIXED_6.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(5);
+});
+
+FIXED_7.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(6);
+});
+
+FIXED_8.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(7);
+});
+
+
+// -------->> hero <<-------- //
 var scrollDown = $('.go-down-btn');
+var menu_btns = $('.nav__link');
+
+const MENU_ABOUT = $('#MENU_ABOUT'),
+	  MENU_BURGERS = $('#MENU_BURGERS'),
+	  MENU_TEEM = $('#MENU_TEEM'),
+	  MENU_MENU = $('#MENU_MENU'),
+	  MENU_REVIEWS = $('#MENU_REVIEWS'),
+	  MENU_CONTACTS = $('#MENU_CONTACTS'),
+	  MENU_ORDER = $('.header__order-link');
+
 scrollDown.on('click', function(event) {
 	event.preventDefault();
 
 	scrollToSection('down');
 });
+
+MENU_ABOUT.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(1);
+});
+
+MENU_BURGERS.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(2);
+});
+
+MENU_TEEM.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(3);
+});
+
+MENU_MENU.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(4);
+});
+
+MENU_REVIEWS.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(5);
+});
+
+MENU_ORDER.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(6);
+});
+
+MENU_CONTACTS.on('click', function(event) {
+	event.preventDefault();
+
+	performTransition(7);
+});
+// -------->> hero <<-------- //
+
 
 
 // -------->> team <<-------- //
@@ -128,6 +241,7 @@ const performTransition = sectionEq => {
 	sections.eq(sectionEq).addClass('active')
 		.siblings().removeClass('active');
 
+	console.log(position);
 	display.css({
 		'transform' : `translate(0, ${position})`,
 		'-webkit-transform' : `translate(0, ${position})`
@@ -176,12 +290,12 @@ $(document).on({
 	touchmove: event => event.preventDefault()
 });
 
-$(document).swipe( {
-    //Generic swipe handler for all directions
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-      // Плагин возращает в каком направлении двигается экран, а функция ждет информации о том, куда скролить сайт
-      const scrollDirection = direction === 'down' ? 'up' : 'down';
+// $(document).swipe( {
+//     //Generic swipe handler for all directions
+//     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+//       // Плагин возращает в каком направлении двигается экран, а функция ждет информации о том, куда скролить сайт
+//       const scrollDirection = direction === 'down' ? 'up' : 'down';
 
-      scrollToSection(scrollDirection);
-    }
-});
+//       scrollToSection(scrollDirection);
+//     }
+// });

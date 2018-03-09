@@ -1,0 +1,48 @@
+<?php 
+	$name = $_POST['name'];
+	$phone = $_POST['phone'];
+	$street = $_POST['street'];
+	$house = $_POST['house'];
+	$corp = $_POST['corp'];
+	$flat = $_POST['flat'];
+	$floor = $_POST['floor'];
+	$comments = $_POST['comments'];
+
+	$coll = $_POST['coll'];
+	$coll = isset($coll) ? "Не перезванивать" : "Перезвонить";
+
+	$mail_massage = '
+	<html>
+    <head>
+        <title>Заказ</title>
+    </head>
+    <body>
+        <h2>Заказ</h2>
+        <ul>
+            <li>Имя:' . $name . '</li>
+            <li>Телефон: ' . $phone . '</li>
+            <li>Адрес: ул. ' . $street . ', д. ' . $house . ', корп. ' . $corp . '' . $flat . ', эт.' . $floor . '</li>
+            <li>Комментарий к заказу: ' . $comments . '</li>
+            <li>Нужно ли перезванивать клиенту: ' . $coll . '</li>
+        </ul>
+    </body>
+    </html>'
+
+    $headers = "From: " . $name . "\r\n".
+                "MIME-Version: 1.0" . "\r\n" .
+                "Content-type: text/html; charset=UTF-8" . "\r\n";
+
+    $mail = mail('banano-palma@inbox.ru', 'Заказ', $mail_message, $headers);
+
+    // $data = [];
+
+    // if ($mail) {
+    //     $data['status'] = "OK";
+    //     $data['mes'] = "Письмо успешно отправлено";
+    // }else{
+    //     $data['status'] = "NO";
+    //     $data['mes'] = "На сервере произошла ошибка";
+    // }
+
+    // echo json_encode($data);
+?>

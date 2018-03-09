@@ -3,7 +3,7 @@
 
 
 <head>
-	<title>Document</title>
+	<title>Сайт бургеров</title>
 	<!-- META -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta charset="UTF-8">
@@ -32,32 +32,32 @@
 							<nav class="nav">
 								<ul class="nav__list">
 									<li class="nav__item">
-										<a href="#" class="nav__link">
+										<a href="#" class="nav__link" id="MENU_ABOUT">
 											О нас
 										</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">
+										<a href="#" class="nav__link" id="MENU_BURGERS">
 											Бургеры
 										</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">
+										<a href="#" class="nav__link" id="MENU_TEEM">
 											Команда
 										</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">
+										<a href="#" class="nav__link" id="MENU_MENU">
 											Меню
 										</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">
+										<a href="#" class="nav__link" id="MENU_REVIEWS">
 											Отзывы
 										</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">
+										<a href="#" class="nav__link" id="MENU_CONTACTS">
 											Контакты
 										</a>
 									</li>
@@ -491,20 +491,20 @@
 					<h2 class="section-title section-title_color_yellow section-title_align_center">
 						Закажите доставку
 					</h2>
-					<form action="#" class="form">
+					<form action="server.php" method="post" class="form" id="form">
 						<div class="form__left-side">
 							<div class="form_row">
 								<label class="form__block">
 									<div class="form__title">
 										Имя
 									</div>
-									<input type="text" class="form__input">
+									<input type="text" class="form__input" id="name" name="name" required>
 								</label>
 								<label class="form__block">
 									<div class="form__title">
 										Телефон
 									</div>
-									<input type="text" class="form__input">
+									<input type="text" class="form__input" id="phone" name="phone" required>
 								</label>
 							</div>
 							<div class="form_row">
@@ -512,7 +512,7 @@
 									<div class="form__title">
 										Улица
 									</div>
-									<input type="text" class="form__input">
+									<input type="text" class="form__input" id="street" name="street" required>
 								</label>
 							</div>
 							<div class="form_row">
@@ -520,25 +520,25 @@
 									<div class="form__title">
 										Дом
 									</div>
-									<input type="text" class="form__input">
+									<input type="text" class="form__input" id="house" name="house" required>
 								</label>
 								<label class="form__block">
 									<div class="form__title">
 										Корпус
 									</div>
-									<input type="text" class="form__input">
+									<input type="text" class="form__input" id="corp" name="corp">
 								</label>
 								<label class="form__block">
 									<div class="form__title">
 										Квартира
 									</div>
-									<input type="text" class="form__input">
+									<input type="text" class="form__input" id="flat" name="flat">
 								</label>
 								<label class="form__block">
 									<div class="form__title">
 										Этаж
 									</div>
-									<input type="text" class="form__input">
+									<input type="text" class="form__input" id="floor" name="floor">
 								</label>
 							</div>
 						</div>
@@ -547,21 +547,21 @@
 								<div class="form__title">
 									Комментарий
 								</div>
-								<textarea name="text" placeholder="Комментарий" class="form__textarea"></textarea>
+								<textarea placeholder="Комментарий" class="form__textarea" id="comments" name="comments"></textarea>
 							</label>
 							<div class="form__radio">
 								<label class="form__radio-label">
-									<input type="radio" name="form__radio-choise" value="cash" class="form__radio-input"> Потребеутся сдача
+									<input type="radio" name="pay" value="cash" class="form__radio-input" id="cash"> Потребеутся сдача
 								</label>
 								<label class="form__radio-label">
-									<input type="radio" name="form__radio-choise" value="card" class="form__radio-input"> Оплата по карте
+									<input type="radio" name="pay" value="card" class="form__radio-input" id="card"> Оплата по карте
 								</label>
 							</div>
 							<label class="form__radio-label">
-								<input type="checkbox" name="coll" value="do-not" class="form__checkbox-input"> Не перезванивать
+								<input type="checkbox" name="coll" value="1" class="form__checkbox-input" id="coll"> Не перезванивать
 							</label>
 							<div class="order__buttons">
-								<a href="#" class="btn order__btn">Заказать</a>
+								<button class="btn order__btn" type="submit">Заказать</button>
 								<a href="#" class="order__btn-clear">Очистить</a>
 							</div>
 						</div>
@@ -600,7 +600,7 @@
 				</footer>
 			</section>
 
-			<section class="section menu">
+			<!-- <section class="section menu">
 				<div class="menu__container">
 					<h2 class="section-title section-title_color_white">
 						Меню
@@ -646,34 +646,34 @@
 						</li>
 					</ul>
 				</div>
-			</section>
+			</section> -->
 
 		</div>
 
 		<ul class="fixed-menu">
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link"></a>
+				<a href="#" class="fixed-menu__link" id="FIXED_1"></a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link"></a>
+				<a href="#" class="fixed-menu__link" id="FIXED_2"></a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link"></a>
+				<a href="#" class="fixed-menu__link" id="FIXED_3"></a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link"></a>
+				<a href="#" class="fixed-menu__link" id="FIXED_4"></a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link"></a>
+				<a href="#" class="fixed-menu__link" id="FIXED_5"></a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link"></a>
+				<a href="#" class="fixed-menu__link" id="FIXED_6"></a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link"></a>
+				<a href="#" class="fixed-menu__link" id="FIXED_7"></a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link"></a>
+				<a href="#" class="fixed-menu__link" id="FIXED_8"></a>
 			</li>
 		</ul>
 	</div>
@@ -698,6 +698,6 @@
 		</div>
 <!-- 	</script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script> -->
 </body>
 </html>

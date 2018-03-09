@@ -411,6 +411,8 @@ footer { position: relative; width: 100%; }
 
 .order__buttons { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 1.25rem; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
+.order__btn { border: none; cursor: pointer; }
+
 .order__btn-clear { margin-left: 1.25rem; color: white; font-size: 0.875rem; text-decoration: none; }
 
 .form { color: white; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin-top: 2.8125rem; }
