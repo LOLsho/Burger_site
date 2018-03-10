@@ -241,7 +241,6 @@ const performTransition = sectionEq => {
 	sections.eq(sectionEq).addClass('active')
 		.siblings().removeClass('active');
 
-	console.log(position);
 	display.css({
 		'transform' : `translate(0, ${position})`,
 		'-webkit-transform' : `translate(0, ${position})`
@@ -277,7 +276,6 @@ $(document).on({
 		scrollToSection(direction);
 	},
 	keydown: event => {
-		console.log(event.keyCode);
 		switch (event.keyCode) {	
 			case 40:
 				scrollToSection('down');

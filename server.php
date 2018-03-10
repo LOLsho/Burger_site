@@ -7,6 +7,7 @@
 	$flat = $_POST['flat'];
 	$floor = $_POST['floor'];
 	$comments = $_POST['comments'];
+	$pay = $_POST['pay'];
 
 	$coll = $_POST['coll'];
 	$coll = isset($coll) ? "Не перезванивать" : "Перезвонить";
@@ -23,10 +24,11 @@
             <li>Телефон: ' . $phone . '</li>
             <li>Адрес: ул. ' . $street . ', д. ' . $house . ', корп. ' . $corp . '' . $flat . ', эт.' . $floor . '</li>
             <li>Комментарий к заказу: ' . $comments . '</li>
-            <li>Нужно ли перезванивать клиенту: ' . $coll . '</li>
+            <li>Способ оплаты: ' . $pay . '</li>
+            <li>Нужно ли перезванивать: ' . $coll . '</li>
         </ul>
     </body>
-    </html>'
+    </html>';
 
     $headers = "From: " . $name . "\r\n".
                 "MIME-Version: 1.0" . "\r\n" .
@@ -36,13 +38,12 @@
 
     // $data = [];
 
-    // if ($mail) {
-    //     $data['status'] = "OK";
-    //     $data['mes'] = "Письмо успешно отправлено";
-    // }else{
-    //     $data['status'] = "NO";
-    //     $data['mes'] = "На сервере произошла ошибка";
-    // }
+    if ($mail) {
+        echo 'done';
+    }else{
+        echo 'failed';
+    }
 
     // echo json_encode($data);
+    echo $mail_massage;
 ?>
