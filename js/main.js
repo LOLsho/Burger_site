@@ -224,6 +224,35 @@ overlay__close.addEventListener('click', function() {
 // });
 
 
+
+// -------->> Map <<-------- //
+var map = document.querySelector('#map__container');
+var onMap = false;
+var footer = document.querySelector('#footer');
+var sectionMap = document.querySelector('.map');
+var map_script = document.querySelector('#map_script');
+
+$( document ).ready(function() {
+    var footer_height = footer.offsetHeight;
+    var sectionMap_height = sectionMap.offsetHeight;
+    var map_height = sectionMap_height - footer_height;
+    // var src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af392ae5392d2a8a2a754c27709f9c1bdea69dbba863ce0a95f64be848b089076&amp;width=100%25&amp;height=" + map_height + "&amp;lang=ru_RU&amp;scroll=true";
+    
+    // map.innerHTML = '<script id="map_script" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af392ae5392d2a8a2a754c27709f9c1bdea69dbba863ce0a95f64be848b089076&amp;width=100%25&amp;height=' + map_height + '&amp;lang=ru_RU&amp;scroll=true"></script>';
+});
+
+
+map.addEventListener('mouseover', function() {
+	onMap = true;
+});
+
+map.addEventListener('mouseout', function() {
+	onMap = false;
+});
+
+
+
+
 // -------->> One page scroll <<-------- //
 const sections = $('.section');
 const display = $('.maincontent');
@@ -250,6 +279,10 @@ const performTransition = sectionEq => {
 		inScroll = false;
 	}, 300);
 	
+	console.log(sectionEq);
+	if (sectionEq == 7) {
+		s
+	}
 };
 
 const scrollToSection = direction => {
@@ -270,10 +303,12 @@ const scrollToSection = direction => {
 
 $(document).on({
 	wheel: event => {
-		var deltaY = event.originalEvent.deltaY;
-		const direction = deltaY > 0 ? 'down' : 'up'; 
+		if (!onMap) {
+			var deltaY = event.originalEvent.deltaY;
+			const direction = deltaY > 0 ? 'down' : 'up'; 
 
-		scrollToSection(direction);
+			scrollToSection(direction);
+		}
 	},
 	keydown: event => {
 		switch (event.keyCode) {	

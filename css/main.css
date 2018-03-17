@@ -157,6 +157,10 @@ a { display: block; }
 
 .wrapper { position: relative; width: 100%; min-height: 100%; overflow: hidden; height: 100%; }
 
+@media screen and (max-width: 768px) { .wrapper { overflow: auto; } }
+
+@media screen and (max-width: 480px) { .wrapper { overflow: auto; } }
+
 .container { max-width: 940px; width: 95%; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; height: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: relative; }
 
 .maincontent { height: 100%; min-height: 600px; position: relative; top: -000%; -webkit-transition: 1s; -o-transition: 1s; transition: 1s; will-change: transform; }
@@ -559,7 +563,9 @@ footer { position: relative; width: 100%; }
 
 .accordion__text { color: white; font-size: 0.875rem; }
 
-.map { background: url("../img/pic/map.jpg") no-repeat center center/cover; position: relative; }
+.map { position: relative; }
+
+.map__container { height: 100%; position: relative; }
 
 .footer { position: absolute; bottom: 0; background: #101010; padding: 0.5625rem 0; }
 
@@ -585,8 +591,8 @@ footer { position: relative; width: 100%; }
 
 .fixed-menu__link { display: -webkit-box; display: -ms-flexbox; display: flex; width: 1rem; height: 1rem; position: relative; border: 0.0625rem solid transparent; border-radius: 50%; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
 
-.fixed-menu__link:hover { border-color: white; }
+.fixed-menu__link:hover { border-color: #e45028; }
 
-.fixed-menu__link:before { content: ''; width: 0.375rem; height: 0.375rem; display: block; border-radius: 50%; background: #fff; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.fixed-menu__link:before { content: ''; width: 0.375rem; height: 0.375rem; display: block; border-radius: 50%; background: #e45028; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=main.css.map */

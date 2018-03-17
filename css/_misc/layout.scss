@@ -33,6 +33,14 @@ a {
   min-height: 100%;
   overflow: hidden;
   height: 100%;
+
+  @include tablets {
+    overflow: auto;
+  }
+
+  @include phones {
+    overflow: auto;
+  }
 }
 
 .container {

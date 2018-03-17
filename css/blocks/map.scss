@@ -1,4 +1,9 @@
 .map {
-	background: url('../img/pic/map.jpg') no-repeat center center / cover;
+	// background: url('../img/pic/map.jpg') no-repeat center center / cover;
+	position: relative;
+}
+
+.map__container {
+	height: 100%;
 	position: relative;
 }
