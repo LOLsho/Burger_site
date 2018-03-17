@@ -319,8 +319,8 @@ $(document).on({
 				scrollToSection('up');
 				break;
 		}
-	},
-	touchmove: event => event.preventDefault()
+	}
+	// touchmove: event => event.preventDefault()
 });
 
 // $(document).swipe( {
